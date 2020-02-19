@@ -18,7 +18,7 @@ fi
 
 #Now - lets find if our input isnt empty
 if (("$#" == 0)); then
-	echo "Input is empty. Usage: trasher.sh filestotrash"
+	echo "Input is empty. Usage: trasher.sh files to trash"
 	exit 1
 fi
 
