@@ -1,11 +1,14 @@
 #!/bin/bash
+
+scriptname=`basename "$0"`
+
 #setting our work directory
 workdir="`dirname "$0"`"
 cd $workdir
 
 #First of all - lets match pre-requirements - set up variables for trash directory and check if it exists on our drive at all
 #WARNING - currently it assumes that only one trash folder located in $HOME/.local/share/Trash/ can exist FOR ALL drives. If you will try to trash files from other drive - they will be moved into that directory on the drive with $HOME on it.
-trashdir="$HOME/.local/share/Trash/"
+trashdir="$HOME/.local/share/Trash"
 trashfiles=$trashdir"/files"
 trashinfo=$trashdir"/info"
 
@@ -18,7 +21,7 @@ fi
 
 #Now - lets find if our input isnt empty
 if (("$#" == 0)); then
-	echo "Input is empty. Usage: trasher.sh files to trash"
+	echo "Input is empty. Usage:" $scriptname "files to trash"
 	exit 1
 fi
 
