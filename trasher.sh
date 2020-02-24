@@ -1,4 +1,7 @@
 #!/bin/bash
+
+scriptname=`basename "$0"`
+
 #setting our work directory
 workdir="`dirname "$0"`"
 cd $workdir
@@ -18,7 +21,7 @@ fi
 
 #Now - lets find if our input isnt empty
 if (("$#" == 0)); then
-	echo "Input is empty. Usage: trasher.sh files to trash"
+	echo "Input is empty. Usage:" $scriptname "files to trash"
 	exit 1
 fi
 
