@@ -1,9 +1,10 @@
 Because sometimes you need smol bash script to trash useless files from command line... *only to realise later that gio already provide such functionality*...
 
 **Dependencies**:
+- coreutils
 - bash
-- jq (for urlencoding. And no, self-written sed rules arent enough for that purpose, since they wont deal with non-latin symbols)
 - sed
+- jq (for urlencoding. And no, self-written sed rules arent enough for that purpose, since they wont deal with non-latin symbols)
 
 **Limitations**:
 - Its **not a complete trash management solution**. The only thing, this script does - is, well, send files to trash bin with matching .trashinfo data for further restoration.
